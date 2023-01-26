@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<script>
+
+    //Funções
+    function pularLinha() {
+        document.write("<br>")
+    }
+    function mostra(msg) {
+        document.write(msg)
+        pularLinha()
+    }
+    function calculoImc(peso, altura) {
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+    /*   
+        //variavel para guardar o resultado da função "CalculoImc"...
+        var imcFlavio = calculoImc(90, 1.87);
+        var imcAmigo = calculoImc(87, 1.78);
+        
+        //imprimir na tela...
+        mostra("O imc de flavio é " + Math.round(imcFlavio));
+        pularLinha();
+        //...
+        mostra("O imc do amigo de flavio é " + Math.round(imcAmigo));
+        pularLinha();
+        
+        //variavel para somar os imc's....
+        var somaImc = imcAmigo + imcFlavio;
+        mostra("A soma dos imc's é " + Math.round(somaImc));
+    */
+    var nome = prompt("Informe seu nome: ")
+    var alturaInformada = prompt("Digite sua altura: ");
+    var pesoInformado = prompt("Digite seu peso");
+    imc = Math.(calculoImc(pesoInformado, alturaInformada));
+    mostra("Olá " + nome + ", o seu imc é " + imc);
+    if (imc < 18.5) {
+        mostra("Seu imc abaixo do normal!")
+    }
+    if (imc >= 18.5 && imc <= 35) {
+        mostra("Seu imc está normal!")
+    }
+    if (imc > 35) {
+        mostra("Seu imc está acima do normal!")
+    }
+</script>
